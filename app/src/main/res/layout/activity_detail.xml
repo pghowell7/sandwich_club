@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_constraintStart_toStartOf="@+id/image_iv"
+    app:layout_constraintTop_toBottomOf="@+id/image_iv"
+    tools:context="com.udacity.sandwichclub.DetailActivity">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="top"-->
+    <!--android:orientation="vertical">-->
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/sand_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1013dp">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/horizontal_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/sandwich_picture_content_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewAlsoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/detail_also_known_as_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/image_iv"
+            app:layout_constraintTop_toBottomOf="@+id/image_iv" />
+
+        <TextView
+            android:id="@+id/also_known_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            app:layout_constraintStart_toStartOf="@+id/horizontal_middle"
+            app:layout_constraintTop_toTopOf="@+id/textViewAlsoLabel"
+            tools:text="what others call me" />
+
+        <TextView
+            android:id="@+id/textViewOriginLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_place_of_origin_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewAlsoLabel"
+            app:layout_constraintTop_toBottomOf="@+id/also_known_tv" />
+
+        <TextView
+            android:id="@+id/origin_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewOriginLabel"
+            app:layout_constraintStart_toStartOf="@+id/horizontal_middle"
+            app:layout_constraintTop_toTopOf="@+id/textViewOriginLabel"
+            tools:text="Not From Here" />
+
+        <TextView
+            android:id="@+id/textViewDescLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_description_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewOriginLabel"
+            app:layout_constraintTop_toBottomOf="@+id/origin_tv" />
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            app:layout_constraintStart_toStartOf="@+id/horizontal_middle"
+            app:layout_constraintTop_toTopOf="@+id/textViewDescLabel"
+            tools:text="Food...Glorious Food" />
+
+        <TextView
+            android:id="@+id/textViewIngredientsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_ingredients_label"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewDescLabel"
+            app:layout_constraintTop_toBottomOf="@+id/description_tv" />
+
+        <TextView
+            android:id="@+id/ingredients_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom"
+            app:layout_constraintStart_toStartOf="@+id/horizontal_middle"
+            app:layout_constraintTop_toTopOf="@+id/textViewIngredientsLabel"
+            tools:text="Lots of Stuff" />
+
+
+    </android.support.constraint.ConstraintLayout>
+    <!--</LinearLayout>-->
+</ScrollView>
